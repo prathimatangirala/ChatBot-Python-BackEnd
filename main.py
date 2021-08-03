@@ -3,8 +3,11 @@ from flask_mail import Mail, Message
 
 from CsuModel import CsuModel
 from CsuData import CsuData
+from flask_cors import CORS 
 
 app = Flask(__name__)
+
+CORS(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
