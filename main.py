@@ -1,7 +1,6 @@
 from flask import Flask, request, render_template, jsonify
 from flask_mail import Mail, Message 
 
-from Model import QA
 from CsuModel import CsuModel
 from CsuData import CsuData
 
@@ -137,7 +136,6 @@ def sendCourseDataRequest():
 
 
 if __name__ == '__main__':
-    qa = QA()
     csuModel = CsuModel()
     csuData  = CsuData()
     content = open("./input_file/model.txt", 'r', encoding='utf-8')
