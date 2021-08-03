@@ -1,0 +1,107 @@
+{"intents": [
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?", "Business hours", "When do you close?", "What time do you open?", "time", "closing time"],
+         "responses": ["We are open 8:30am-6pm Sunday-Thursday!"]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure", "You're very welcome"]
+        },
+        {"tag": "scholarships",
+         "patterns": ["Do you have scholarships", "Scholarships", "What are the scholarships", "scholarship", "ScholarShip Information"],
+         "responses": ["Please visit <a href=\"https://www.csu.edu/financialaid/scholarship.htm\" target=\"_blank\">link for scholaship information<\/a>. For more info, email: csu-finaid@csu.edu"]
+        },
+         {"tag": "Transfer",
+         "patterns": ["show me about Transfer details", "Transfer", "Transfer guidelines","What are the required for Transfer"],
+         "responses": ["Please contact advisor for Transfer guidelines, Here is the <a href=\"https://csu.edu/provost/academicadvising.htm\" target=\"_blank\">link<\/a>."]
+        },
+        {"tag": "Admission",
+         "patterns": ["Tell me about your Admission","What Admission do you offer?", " apply Admission", "Admission", "What are your Admissions?", "What Admissions are there?", "offered Admissions", "How to I apply for Admission?"],
+         "responses": ["CSU offers Admissions for  Undergraduate and Graduate programs. Which program are you interested in?"],
+         "context_set": ""
+        },
+        {"tag": "Suggestion1",
+         "patterns": ["undergraduate", "undergraduate Admission", "how should i apply for undergraduate Admission", "where can i apply for undergraduate Admission", "whom should i contact for undergraduate Admission"],
+         "responses": ["You can apply for undergraduate Admission <a href=\"https://www.csu.edu/admissions/howtoapplynow.htm\" target=\"_blank\">here<\/a>, for more info contact: ug-admissions@csu.edu"],
+         "context_set": "suggest"
+        },
+        {"tag": "Suggestion2",
+         "patterns": ["graduate"," apply for graduate Admission", "graduate Admission", "how should i apply for graduate Admission", "where can i apply for graduate Admission", "whom should i contact for graduate Admission"],
+         "responses": ["You can apply for graduate Admission <a href=\"https://www.csu.edu/graduateschool/admission_application.htm\" target=\"_blank\">here<\/a>, for more info contact: grad-admissions@csu.edu"],
+         "context_set": "suggest"
+        },
+        {"tag": "payments_1",
+         "patterns": ["Where can I pay?", "How do I pay?", "Payment?", "Fees payment", "I want to pay for fees", "Fees", "Pay my fees", "Make a payment", "I want to pay"],
+         "responses": ["For information on fees, payments plans or any financial enquiries, you can email: bursar@csu.edu"]
+        },
+        {"tag": "Tuition Fees",
+         "patterns": ["Where can I find Tuition Fees details?", "How much is the Tuition Fees?", "Tuition Fees?", "Can I know the about amount for Tuition Fees", "Show me Tuition Fees", "I want to know about Tuition Fees"],
+         "responses": ["For information on Tuition Fees, you can visit the link <a href=\"https://www.csu.edu/financialoperations/bursar/tuition/\" target=\"_blank\">here<\/a> or for more details email: bursar@csu.edu"]
+        },
+        {"tag": "Parking",
+         "patterns": ["Where can I find about Parking details?", "How much is the Parking Fees?", "Parking", "Can I know the about amount Parking", "Show me TParking", "I want to know about Parking"],
+         "responses": ["Booth Hours: Mon to  Fri: 9am to 4pm, you can visit the link <a href=\"https://csu.edu/campus/parking.htm\" target=\"_blank\">here<\/a> or for more details email: parking@csu.edu"]
+        },
+        {"tag": "credit",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+         "responses": ["We accept VISA and Mastercard", "We accept most major credit cards"]
+        },
+        {"tag": "Joke",
+         "patterns": ["Tell me a joke", "Joke", "Give me a joke"],
+         "responses": ["How do robots eat guacamole?\nwith microchips!\n*bu dum tss*", "What do robots eat as snacks?\nmicrochips!"]
+        },
+        {"tag": "Name",
+         "patterns": ["What is your name?", "Your name", "Do you have a name"],
+         "responses": ["The name's CSU ChatBot, nice to met you", "My name is CSU ChatBot", "I am CSU ChatBot"]
+        },
+        {"tag": "College website",
+         "patterns": ["provide me College website link?", " CSU College website", "connect me to College website", "College website", "CSU website", "CSU", "show me College website link"],
+         "responses": [" Welcome to Chicago State University, Here is the CSU website link <a href=\"https://www.csu.edu/\" target=\"_blank\">here<\/a>"]
+        },
+        {"tag": "Cougarconnect",
+         "patterns": ["provide me Cougarconnect link?", "Cougarconnect", "connect me to Cougarconnect", "Cougar", "show me the Cougarconnect link"],
+         "responses": ["Here is the Cougarconnect <a href=\"https://cougarconnect.csu.edu/cp/home/displaylogin\" target=\"_blank\">link<\/a>, please login with your student credentials"]
+        },
+        {"tag": "Moodle",
+         "patterns": ["provide me Moodle link", "Moodle", "connect me to Moodle", "show me the Moodle link"],
+         "responses": ["Here is the Moodle  <a href=\"https://csumoodle.remote-learner.net/\" target=\"_blank\">link<\/a> .please login with your student credentials to view the registered courses"]
+        },
+        {"tag": "Calendar",
+         "patterns": ["provide me Academic Calendar link", "Academic Calendar", "Calendar", "show me the Academic Calendar", "show me the Calendar", "Where can I find the Calendar", "Where can I find the  Academic Calendar"],
+         "responses": ["you can find the academic calendar <a href=\"https://www.csu.edu/coursebulletin/acadcalendar/index.htm\" target=\"_blank\">Here<\/a>"]
+        },
+        {"tag": "News",
+         "patterns": ["What are Latest College News", "News", "College News", "Latest News", "show me latest College News", "show me the News", "Where can I find College News", "Where can I find the Lastest College News"],
+         "responses": ["Get the latest news about our university  <a href=\"https://www.csu.edu/#News\" target=\"_blank\">Here<\/a>"]
+        },
+        {"tag": "Events",
+         "patterns": ["What are Latest College Events", "Event", "Events", "College Events", "Latest Events", "show me latest College Events", "show me the Events", "Where can I find College Events", "show me all upcoming events in Chicago state university?", "Where can I find the Lastest College Events"],
+         "responses": ["Click and check it out all the upcoming events in Chicago state university <a href=\"https://www.csu.edu/events/Allevents.htm\" target=\"_blank\">Here<\/a>"]
+        },
+        {"tag": "Courses",
+         "patterns": ["show me list of courses for semester?", "courses for semester", "courses", "semester courses", "show me courses for semester", "show me the courses", "Where can I find courses for semester?"],
+         "responses": ["Please visit the link given to get more information <a href=\"https://www.csu.edu/coursebulletin/\" target=\"_blank\">List of Courses<\/a>"]
+        },
+        {"tag": "Exam",
+         "patterns": ["get me information about examinations?", "exam", "examinations", "when are the exams", "Where can I find about examinations?"],
+         "responses": ["The Office of Examinations serves as the central location on campus for the administration of placement and testing services. The Office of Examinations runs the Examinations Testing Lab which is located at Gwendolyn Brooks Library, Room 144. At the Examinations Testing Lab, new and current students can take placement exams as part of getting started with registration for required English composition and Math courses., For more Information here is the link <a href=\"https://www.csu.edu/examinations/\" target=\"_blank\">details<\/a>"]
+        },
+        {"tag": "Library",
+         "patterns": ["get me information about library?", "library link", "library", "Where can I find about library?"],
+         "responses": ["You can visit to our digital library through the <a href=\"https://library.csu.edu/home\" target=\"_blank\">link<\/a>"]
+        },
+        {"tag": "Insurance",
+         "patterns": ["get me information about Student Health Insurance?", "Student Health Insurance", "get me information about Student Health Insurance Wavier?", "Health Insurance Wavier", "Insurance Wavier", "Health Insurance", "Insurance", "how to apply for Student Health Insurance?", "Where can I find about Student Health Insurance?", "How should i apply for Student Health Insurance Wavier"],
+         "responses": ["All registered undergraduate students taking 12 or more credit hours, graduate students taking 9 or more credit hours, pharmacy students taking 12 or more credit hours and doctoral students taking 6 or more credit hours are automatically enrolled into the mandatory sickness and injury insurance through the university each semester. All International students are required to purchase the insurance plan for the school year.  Part-time students taking 6-11 credit hours are eligible to enroll in this plan., For more info <a href=\"https://www.csu.edu/collegeofhealthsciences/wellnesscenter/insurance.htm\" target=\"_blank\">Visit<\/a>"]
+        },
+        {"tag": "Wellness/Health center",
+         "patterns": ["get me information about Student Health immunization?", "Student Health immunization", "get me information about Student Health immunization?", "Immunization", "how to apply for Student Health immunization?", "Where can I find about Student  immunization"],
+         "responses": ["The Wellness/Health Center works with CSU’s College of Health Sciences to increase health care access to the campus community., For more info  <a href=\"https://csu.edu/collegeofhealthsciences/wellnesscenter/index.htm\" target=\"_blank\">visit<\/a> or contact Phone: (773) 995-2011, Email: wellness@csu.edu"]
+        },
+        {"tag": "Job",
+         "patterns": ["get me information about jobs", "jobs", "job", "get me information about jobs?", "How to find jobs in university",  "how to apply for jobs in university?", "How should i apply for job"],
+         "responses": [" please visit <a href=\"https://chicagostate.peopleadmin.com/\" target=\"_blank\">link<\/a>, contact the Office of Human Resources at 773-995-2040 or HR@csu.edu"]
+        }
+]
+}
+
