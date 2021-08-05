@@ -13,18 +13,14 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = "prathima.tangirala@gmail.com"
+app.config['MAIL_USERNAME'] = "ptangiralas@gmail.com"
 app.config['MAIL_PASSWORD'] = "amithareddy"
 mail = Mail(app)
 
 
 @app.route('/chatbot/data', methods=['POST','OPTIONS'])
 def predictionDataApi():
-    if request.method == 'GET':
-        return jsonify({
-    "test": "test",
-})
-    elif request.method == 'POST':
+    if request.method == 'POST':
         question = request.get_json(force=True)
         print(question)
         modelresponse = csuModel.chatBotAPI(question['query'])
