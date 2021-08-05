@@ -31,6 +31,7 @@ class CsuData:
     DB_SELECT_STUDENT_TABLE = 'SELECT * FROM student'
     cursor.execute(DB_SELECT_STUDENT_TABLE) 
     student_list = cursor.fetchall()
+    print(student_list)
     connect.commit()
     cursor.close()
     connect.close()     
@@ -70,7 +71,21 @@ class CsuData:
     connect.commit()
     cursor.close()
     connect.close()   
-    return account_balance   
+    return account_balance  
+
+
+ def show_full_billing_table():
+    connect = sqlite3.connect('universitystudent.db')
+    cursor = connect.cursor()
+    DB_SELECT_ACCOUNT_TABLE = 'SELECT * FROM account'
+    cursor.execute(DB_SELECT_ACCOUNT_TABLE)
+    account_list = cursor.fetchall()
+    for index, account in enumerate(account_list): 
+     print(account_list)
+    connect.commit()
+    cursor.close()
+    connect.close()
+         
 
  def create_payments_table(): #Create table function
     connect = sqlite3.connect('universitystudent.db') # Connect to the database
@@ -111,6 +126,20 @@ class CsuData:
     connect.close()    
     return  payment_method,payment_amount 
 
+ def show_full_payments_table():
+    connect = sqlite3.connect('universitystudent.db')
+    cursor = connect.cursor()
+    DB_UPDATE_PAYMENT_TABLE = 'UPDATE payment SET payment_amount = ? ,payment_method = ?  WHERE student_id = ? ;'
+    cursor.execute(DB_UPDATE_PAYMENT_TABLE, ('3000','debit','900777634',))
+    DB_SELECT_PAYMENT_TABLE = 'SELECT * FROM payment'
+    cursor.execute(DB_SELECT_PAYMENT_TABLE)
+    payment_list = cursor.fetchall()
+    for index, payment in enumerate(payment_list):
+      print(payment_list)
+    connect.commit()
+    cursor.close()
+    connect.close()      
+
  def create_course_table(): #Create table function
     connect = sqlite3.connect('universitystudent.db') # Connect to the database
     cursor = connect.cursor() #Get the cursor
@@ -144,6 +173,33 @@ class CsuData:
     connect.close()    
     return  course_list    
 
+
+ def show_full_course_table():
+    connect = sqlite3.connect('universitystudent.db')
+    cursor = connect.cursor()
+    DB_SELECT_COURSE_TABLE = 'SELECT * FROM course'
+    cursor.execute(DB_SELECT_COURSE_TABLE)
+    course_list = cursor.fetchall()
+    print(course_list)
+    connect.commit()
+    cursor.close()
+    connect.close()    
+    return  course_list   
+
+ def update_full_course_table():
+    connect = sqlite3.connect('universitystudent.db')
+    cursor = connect.cursor()
+    DB_UPDATE_COURSE_TABLE = 'UPDATE course SET course_semester = ? WHERE course_id = ? ;'
+    cursor.execute(DB_UPDATE_COURSE_TABLE, ('Spring-2021','10002',))
+    DB_SELECT_COURSE_TABLE = 'SELECT * FROM course'
+    cursor.execute(DB_SELECT_COURSE_TABLE)
+    course_list = cursor.fetchall()
+    print(course_list)
+    connect.commit()
+    cursor.close()
+    connect.close()    
+    return  course_list         
+
  def create_student_course_table(): #Create table function
     connect = sqlite3.connect('universitystudent.db') # Connect to the database
     cursor = connect.cursor() #Get the cursor
@@ -163,6 +219,19 @@ class CsuData:
     cursor = connect.cursor()
     sql = 'INSERT INTO student_course(student_course_id, student_id, course_id, grade, course_semester) VALUES (:student_course_id, :student_id,:course_id,:grade, :course_semester);'
     cursor.execute(sql,{'student_course_id':student_course_id, 'student_id':student_id,'course_id':course_id, 'grade':grade, 'course_semester':course_semester })
+    connect.commit()
+    connect.close()
+    print('Student Course Information Add Complete') 
+
+
+
+ def show_full_student_course_table(): 
+    connect = sqlite3.connect('universitystudent.db')
+    cursor = connect.cursor()
+    sql = 'SELECT * FROM  student_course'
+    cursor.execute(sql)
+    student_course_list = cursor.fetchall()
+    print(student_course_list)
     connect.commit()
     connect.close()
     print('Student Course Information Add Complete')    
@@ -286,7 +355,19 @@ class CsuData:
         elif num == 16:
             show_latest_transcripts() 
         elif num == 17:
-            show_course_table()                 
+            show_course_table() 
+        elif num == 18:
+            show_full_course_table()  
+        elif num == 19:
+            show_full_billing_table() 
+        elif num == 20:
+            show_full_student_course_table() 
+        elif num == 21:
+            show_full_account_table()  
+        elif num == 22:
+            update_full_course_table() 
+        elif num == 23:
+            show_full_payments_table()                                        
         elif num == 0:
             break
         else:
